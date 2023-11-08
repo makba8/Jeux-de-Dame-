@@ -1,0 +1,6 @@
+Pions se deplacent d’une case en diagonale vers l’avant, quand il mange il peut aller vers l’avant et passe par dessus le pion donc il va sur la case d’après (le pion uniquement vers l’avant)
+manger pion en diagonale, si y en a un autre après le manger de nouveau etc jusqu’à ce qu’il y en ait plus (saute mouton) 
+
+Le pion se transforme en dame si il atteint l’extrémité de la grille
+La dame peut se deplacer dans sur toute la diagonale autant de cases qu’elle veut et elle peut aller en arrière (mais qu’en diagonale) elle peut en manger plusieurs sur le passage ( et quand elle mange elle va sur la case d’après)(donc il faut qu’il y ait une case après)
+Pion peut manger la dame en mode normal
