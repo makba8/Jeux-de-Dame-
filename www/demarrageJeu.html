@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Démarrage du jeu</title>
+
+        <style>
+          body{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+         }
+
+         #timer {
+            text-align: center;
+         }
+
+         button {
+            margin-top: 20px;
+         }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <!-- ici, le timer de lancement de partie -->
+            <!-- A FAIRE : faire apparaitre le timer que quand on clique sur Lancer la partie -->
+            <div id="timer">30</div>
+            <button id="startBtn">Lancer la partie</button>
+        </div>
+
+        <h3>Meilleur score : </h3>
+        <!-- Ici, afficher le meilleur score du joueur ou rien s'il vient de s'inscrire-->
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () { // "DOMContentLoaded" permet de lancer la fonction même si
+                                        // toute la page n'a pas chargée
+              let timer = document.getElementById("timer");
+              let startBtn = document.getElementById("startBtn");
+        
+              // ajout de l'évènement click du bouton pour lancer le timer
+              startBtn.addEventListener("click", function () {
+
+                let decompte = 30; // depart à 30 secondes
+        
+                // Mise à jour du décompte
+                let timerInterval = setInterval(function () {
+                    decompte--;
+                  timer.textContent = decompte;
+        
+                  // Si le compte à rebours atteint zéro, arrêtez le minuteur
+                  // A TERMINER : ici, on pourra gérer si un autre joueur a été trouvé ou pas dans le if
+                  // si décompte = 0 ET que personne n'a été trouvé, afficher un message,
+                  // sinon si quelqu'un a été trouvé avant la fin, on arrête le timer
+                  if (decompte === 0) {
+                    clearInterval(timerInterval); // faire cesser le décompte
+                    alert("Aucun joueur trouvé pour vous affrontez...");
+                    
+                  }
+                }, 1000); // Intervale de 1000 milisecondes soit 1 seconde
+              });
+            });
+          </script>
+
+    </body>
+</html>

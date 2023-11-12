@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inscription / Connexion</title>
+
+    <style>
+      body{
+          display: flex; 
+          flex-direction: column;
+          align-items: center;
+      }
+
+      button {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Inscription / Connexion </h1>
+    <button id="inscriptionBtn">Inscription</button>
+    <button id="connexionBtn">Connexion</button>
+  
+    <script>
+      // Fonction de redirection vers une ou l'autre page
+      function redirigerVersPage(page) {
+        window.location.href = page;
+      }
+  
+      document.getElementById("inscriptionBtn").addEventListener("click", function() {
+        redirigerVersPage("inscription.html");
+      });
+  
+      document.getElementById("connexionBtn").addEventListener("click", function() {
+        redirigerVersPage("connexion.html");
+      });
+    </script>
+</html>
