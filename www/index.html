@@ -1,33 +1,7 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
   <head>
     <meta charset="utf-8" />
-    <!--
-        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
-            https://cordova.apache.org/docs/en/latest/
-        Some notes:
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self' data: ws: 'unsafe-inline' ://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
@@ -38,13 +12,54 @@
       name="viewport"
       content="initial-scale=1, width=device-width, viewport-fit=cover"
     />
-    <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="css/index.css" />
     <title>Hello World</title>
   </head>
   <body>
     <div class="app">
-      <h1>Hello World je test un projet</h1>
+      <!-- Page de choix entre inscription et connexion -->
+      <div id="choixInscrCo">
+        <h1>Inscription / Connexion</h1>
+        <button class="choixInscrCoBtn" id="inscriptionBtn">Inscription</button>
+        <button class="choixInscrCoBtn" id="connexionBtn">Connexion</button>
+      </div>
+      <!-- Page de choix entre inscription -->
+      <div id="inscription">
+        <h1>Inscription</h1>
+        <button id="revenirBtnInscr">Revenir en arriere</button>
+        <p>Tapez un pseudo :</p>
+        <input type="text" class="pseudoTXT" />
+        <p>Tapez un mot de passe :</p>
+        <input type="text" class="mdpTXT" />/>
+        <br />
+        <button id="validerBtnInscr">Valider</button>
+      </div>
+      <!-- Page de choix entre connexion -->
+      <div id="connexion">
+        <h1>Connexion</h1>
+        <button id="revenirBtnCo">Revenir en arriere</button>
+        <p>Votre pseudo :</p>
+        <input type="text" class="pseudoTXT" />
+        <p>Votre mot de passe :</p>
+        <input type="text" class="mdpTXT" />
+        <br />
+        <button id="validerBtnCo">Valider</button>
+      </div>
+
+      <!-- Page d'accueil -->
+      <div id="accueil">
+        <div>
+          <!-- ici, le timer de lancement de partie -->
+          <!-- A FAIRE : faire apparaitre le timer que quand on clique sur Lancer la partie -->
+          <div id="timer">30</div>
+          <button id="startBtn">Lancer la partie</button>
+        </div>
+        <h3>Meilleur score :</h3>
+        <!-- Ici, afficher le meilleur score du joueur ou rien s'il vient de s'inscrire-->
+      </div>
+
+      <!-- Page de jeux  -->
+      <div id="damier"></div>
     </div>
 
     <script src="cordova.js"></script>
