@@ -62,6 +62,7 @@ validerBtnCo.addEventListener("click", (event) => {
 startBtn.addEventListener("click", function () {
   let decompte = 30; // depart à 30 secondes
 
+  timer.style.visibility = "visible";
   // Mise à jour du décompte
   let timerInterval = setInterval(function () {
     decompte--;

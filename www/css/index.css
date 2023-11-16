@@ -95,6 +95,7 @@
 }
 #timer {
   text-align: center;
+  visibility: hidden;
 }
 #startBtn {
   margin-top: 20px;
