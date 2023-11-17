@@ -14,6 +14,8 @@ this.pageAccueil = document.getElementById("accueil");
 let timer = document.getElementById("timer");
 let startBtn = document.getElementById("startBtn");
 
+this.pageDamier = document.getElementById("damier");
+
 ////////////////////////////////////////////////////////////////
 // page choix inscription connexion
 ////////////////////////////////////////////////////////////////
@@ -77,3 +79,7 @@ startBtn.addEventListener("click", function () {
     }
   }, 1000); // Intervale de 1000 milisecondes soit 1 seconde
 });
+
+////////////////////////////////////////////////////////////////
+//page de Jeux Damier
+////////////////////////////////////////////////////////////////

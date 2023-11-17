@@ -100,3 +100,10 @@
 #startBtn {
   margin-top: 20px;
 }
+
+#damier {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
