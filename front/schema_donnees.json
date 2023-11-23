@@ -1,0 +1,34 @@
+{
+  "joueurs": [
+      {
+          "pseudo": "Joueur 1",
+          "motDePasse": "motdepasse1",
+          "score": 50,
+          "historique": [
+              {
+                  "adversaire": "Adversaire 1",
+                  "etatPartie": {
+                      "victoire": true,
+                      "defaite": false,
+                      "nul": false
+                  }
+              }
+          ]
+      },
+      {
+          "pseudo": "Joueur 2",
+          "motDePasse": "motdepasse2",
+          "score": 30,
+          "historique": [
+              {
+                  "adversaire": "Adversaire 2",
+                  "etatPartie": {
+                      "victoire": false,
+                      "defaite": true,
+                      "nul": false
+                  }
+              }
+          ]
+      }
+  ]
+}

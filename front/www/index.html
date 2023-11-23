@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: ws: 'unsafe-inline' ://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Hello World</title>
+    <script type="module" src="app.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Page de choix entre inscription et connexion -->
+      <div id="choixInscrCo">
+        <h1>Inscription / Connexion</h1>
+        <button class="choixInscrCoBtn" id="inscriptionBtn">Inscription</button>
+        <button class="choixInscrCoBtn" id="connexionBtn">Connexion</button>
+      </div>
+      <!-- Page de choix entre inscription -->
+      <div id="inscription">
+        <h1>Inscription</h1>
+        <button id="revenirBtnInscr">Revenir en arriere</button>
+        <p>Tapez un pseudo :</p>
+        <input type="text" class="pseudoTXT" />
+        <p>Tapez un mot de passe :</p>
+        <input type="text" class="mdpTXT" />
+        <br />
+        <button id="validerBtnInscr">Valider</button>
+      </div>
+      <!-- Page de choix entre connexion -->
+      <div id="connexion">
+        <h1>Connexion</h1>
+        <button id="revenirBtnCo">Revenir en arriere</button>
+        <p>Votre pseudo :</p>
+        <input type="text" class="pseudoTXT" />
+        <p>Votre mot de passe :</p>
+        <input type="text" class="mdpTXT" />
+        <br />
+        <button id="validerBtnCo">Valider</button>
+      </div>
+
+      <!-- Page d'accueil -->
+      <div id="accueil">
+        <div>
+          <!-- ici, le timer de lancement de partie -->
+          <div id="timer">30</div>
+          <button id="startBtn">Lancer la partie</button>
+        </div>
+        <h3>Meilleur score :</h3>
+        <!-- Ici, afficher le meilleur score du joueur ou rien s'il vient de s'inscrire-->
+      </div>
+
+      <!-- Page de jeux  -->
+      <div id="damier">
+        <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+          <!-- x et y sont utilisés pour spécifier les coordonnées de l'angle supérieur gauche -->
+          <rect x="0" y="0" width="50" height="50" fill="#fff" />
+          <rect x="50" y="0" width="50" height="50" fill="#8B4513" />
+          <rect x="100" y="0" width="50" height="50" fill="#fff" />
+          <rect x="150" y="0" width="50" height="50" fill="#8B4513" />
+          <rect x="200" y="0" width="50" height="50" fill="#fff" />
+          <rect x="250" y="0" width="50" height="50" fill="#8B4513" />
+          <rect x="300" y="0" width="50" height="50" fill="#fff" />
+          <rect x="350" y="0" width="50" height="50" fill="#8B4513" />
+
+          <rect x="0" y="50" width="50" height="50" fill="#8B4513" />
+          <rect x="50" y="50" width="50" height="50" fill="#fff" />
+          <rect x="100" y="50" width="50" height="50" fill="#8B4513" />
+          <rect x="150" y="50" width="50" height="50" fill="#fff" />
+          <rect x="200" y="50" width="50" height="50" fill="#8B4513" />
+          <rect x="250" y="50" width="50" height="50" fill="#fff" />
+          <rect x="300" y="50" width="50" height="50" fill="#8B4513" />
+          <rect x="350" y="50" width="50" height="50" fill="#fff" />
+
+          <rect x="0" y="100" width="50" height="50" fill="#fff" />
+          <rect x="50" y="100" width="50" height="50" fill="#8B4513" />
+          <rect x="100" y="100" width="50" height="50" fill="#fff" />
+          <rect x="150" y="100" width="50" height="50" fill="#8B4513" />
+          <rect x="200" y="100" width="50" height="50" fill="#fff" />
+          <rect x="250" y="100" width="50" height="50" fill="#8B4513" />
+          <rect x="300" y="100" width="50" height="50" fill="#fff" />
+          <rect x="350" y="100" width="50" height="50" fill="#8B4513" />
+
+          <rect x="0" y="150" width="50" height="50" fill="#8B4513" />
+          <rect x="50" y="150" width="50" height="50" fill="#fff" />
+          <rect x="100" y="150" width="50" height="50" fill="#8B4513" />
+          <rect x="150" y="150" width="50" height="50" fill="#fff" />
+          <rect x="200" y="150" width="50" height="50" fill="#8B4513" />
+          <rect x="250" y="150" width="50" height="50" fill="#fff" />
+          <rect x="300" y="150" width="50" height="50" fill="#8B4513" />
+          <rect x="350" y="150" width="50" height="50" fill="#fff" />
+
+          <rect x="0" y="200" width="50" height="50" fill="#fff" />
+          <rect x="50" y="200" width="50" height="50" fill="#8B4513" />
+          <rect x="100" y="200" width="50" height="50" fill="#fff" />
+          <rect x="150" y="200" width="50" height="50" fill="#8B4513" />
+          <rect x="200" y="200" width="50" height="50" fill="#fff" />
+          <rect x="250" y="200" width="50" height="50" fill="#8B4513" />
+          <rect x="300" y="200" width="50" height="50" fill="#fff" />
+          <rect x="350" y="200" width="50" height="50" fill="#8B4513" />
+
+          <rect x="0" y="250" width="50" height="50" fill="#8B4513" />
+          <rect x="50" y="250" width="50" height="50" fill="#fff" />
+          <rect x="100" y="250" width="50" height="50" fill="#8B4513" />
+          <rect x="150" y="250" width="50" height="50" fill="#fff" />
+          <rect x="200" y="250" width="50" height="50" fill="#8B4513" />
+          <rect x="250" y="250" width="50" height="50" fill="#fff" />
+          <rect x="300" y="250" width="50" height="50" fill="#8B4513" />
+          <rect x="350" y="250" width="50" height="50" fill="#fff" />
+
+          <rect x="0" y="300" width="50" height="50" fill="#fff" />
+          <rect x="50" y="300" width="50" height="50" fill="#8B4513" />
+          <rect x="100" y="300" width="50" height="50" fill="#fff" />
+          <rect x="150" y="300" width="50" height="50" fill="#8B4513" />
+          <rect x="200" y="300" width="50" height="50" fill="#fff" />
+          <rect x="250" y="300" width="50" height="50" fill="#8B4513" />
+          <rect x="300" y="300" width="50" height="50" fill="#fff" />
+          <rect x="350" y="300" width="50" height="50" fill="#8B4513" />
+
+          <rect x="0" y="350" width="50" height="50" fill="#8B4513" />
+          <rect x="50" y="350" width="50" height="50" fill="#fff" />
+          <rect x="100" y="350" width="50" height="50" fill="#8B4513" />
+          <rect x="150" y="350" width="50" height="50" fill="#fff" />
+          <rect x="200" y="350" width="50" height="50" fill="#8B4513" />
+          <rect x="250" y="350" width="50" height="50" fill="#fff" />
+          <rect x="300" y="350" width="50" height="50" fill="#8B4513" />
+          <rect x="350" y="350" width="50" height="50" fill="#fff" />
+          <rect x="400" y="350" width="50" height="50" fill="#8B4513" />
+          <rect x="450" y="350" width="50" height="50" fill="#fff" />
+
+          <!-- Dessin des pions -->
+          <!-- cx et cy sont utilisés pour spécifier les coordonnées du centre d'un cercle
+          r est egale au rayon du cercle  -->
+
+          <circle cx="75" cy="25" r="15" fill="black" />
+          <circle cx="175" cy="25" r="15" fill="black" />
+          <circle cx="275" cy="25" r="15" fill="black" />
+          <circle cx="375" cy="25" r="15" fill="black" />
+          <circle cx="575" cy="25" r="15" fill="black" />
+          <circle cx="25" cy="75" r="15" fill="black" />
+          <circle cx="125" cy="75" r="15" fill="black" />
+          <circle cx="225" cy="75" r="15" fill="black" />
+          <circle cx="75" cy="125" r="15" fill="black" />
+          <circle cx="175" cy="125" r="15" fill="black" />
+          <circle cx="275" cy="125" r="15" fill="black" />
+          <circle cx="375" cy="125" r="15" fill="black" />
+
+          <circle cx="25" cy="375" r="15" fill="white" />
+          <circle cx="25" cy="275" r="15" fill="white" />
+          <circle cx="75" cy="325" r="15" fill="white" />
+          <circle cx="125" cy="375" r="15" fill="white" />
+          <circle cx="225" cy="375" r="15" fill="white" />
+          <circle cx="325" cy="375" r="15" fill="white" />
+          <circle cx="175" cy="325" r="15" fill="white" />
+          <circle cx="225" cy="275" r="15" fill="white" />
+          <circle cx="375" cy="322" r="15" fill="white" />
+          <circle cx="125" cy="275" r="15" fill="white" />
+          <circle cx="325" cy="275" r="15" fill="white" />
+          <circle cx="275" cy="325" r="15" fill="white" />
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
