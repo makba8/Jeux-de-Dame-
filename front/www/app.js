@@ -1,0 +1,1 @@
+// routeur pour tous les autre fichier js du front (pas obligé de s'en servir mais permet de mieux ce repérer)
