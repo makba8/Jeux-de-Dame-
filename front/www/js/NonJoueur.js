@@ -1,0 +1,1 @@
+// Gestion de message et empécher la grille d'être cliquable 

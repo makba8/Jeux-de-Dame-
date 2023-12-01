@@ -14,9 +14,6 @@
     />
     <link rel="stylesheet" href="css/index.css" />
     <title>Hello World</title>
-    <script type="module" src="app.js"></script>
-    <script src="cordova.js"></script>
-    <script src="js/index.js"></script>
   </head>
   <body>
     <div class="app">
@@ -62,7 +59,12 @@
 
       <!-- Page de jeux  -->
       <div id="damier">
-        <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          id="checkersBoard"
+          width="400"
+          height="400"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <!-- x et y sont utilisés pour spécifier les coordonnées de l'angle supérieur gauche -->
           <rect x="0" y="0" width="50" height="50" fill="#fff" />
           <rect x="50" y="0" width="50" height="50" fill="#8B4513" />
@@ -171,4 +173,7 @@
       </div>
     </div>
   </body>
+  <script type="module" src="app.js"></script>
+  <script src="cordova.js"></script>
+  <script src="./js/Affichage.js"></script>
 </html>
