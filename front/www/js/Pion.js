@@ -1,0 +1,1 @@
+// classe de gestion des pions
